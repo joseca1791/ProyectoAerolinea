@@ -1,0 +1,22 @@
+Servidor:
+	Backend
+		Capa de datos. -- base de datos/recomendado Oracle/esta capa no se va a ver dentro de 					las carpetas o del proyecto, solo va a estar formalizada como PL-SQL 					(funciones y procedimientos almacenados). Trabajar esto en la capa de 				datos da seguridad al proyecto
+				JDBC: tiene 3 elementos, el statement (select *), el prepair statement 					(insert + ciertos parámetros), el callable statement (llama la función 				o el procedimiento almacenado).
+		Capa de acceso a datos. -- las listas de objetos, y los patrones, como el patrón 				iterador. Aquí va el CRUD.
+		Capa de lógica de negocio. -- NUNCA debería meterse input output en la lógica de 				negocio, operación que se necesite realizar se manda a FE, no 				directamente desde la lógica de negocio.
+		Capa de control. -- hacer match entre el FE y el BE (si es Web, me la juego con JSP o 				cualquier webserver).
+	Frontend
+		Con el backend, puede haber una salida a un webapp, a un desktop, mobile app o 				console app
+		El patrón observer va aquí,en el frontend.
+
+
+Ejemplo:
+
+	El usuario va a ingresar sus datos, estamos en el FE... se debe hacer una biblioteca con las clases y se incorpora al proyecto (osea la logica de negocio), al hacer click se genera un objeto a través del JAR incorporado, y la primera capa de debe encontrar es el control (server) HTTPURLConection, el control recibe el objeto y genera un objeto de acceso a datos y paso directamente a acceso a datos (aquí debe haber singleton implementado), para unir el acceso a datos a los datos uso los procedimientos almacenados y las funciones.
+	
+	Proceso inverso: desde el control tengo que llamar un objeto de tipo acceso a dato que me devuelve un arraylist o vector que se convierte en lógica de negocio y el mismo controler devuelve ese objeto para el FE.
+
+
+Proyecto:
+1. proyecto BE, otro proyecto BE, y la libreria implementada tanto en el BE como el FE.
+Para el proyecto vamos a tener que usar ojdbc6.jar (driver)
