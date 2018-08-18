@@ -1,0 +1,50 @@
+<%@ page import ="Model.Cliente"%>
+
+
+<header class =cabezera>
+<div class= "container">
+
+<div class ="row">
+<div class="col-sm-3 ">
+
+
+
+</div>
+
+
+
+</div>
+</div>
+</header>
+	<!-- FIN Cabezera -->
+
+<!-- Navegacion -->
+
+<nav>
+<div class ="container nav">
+<ul class ="menu">
+		<li class="boton"> <a href= "ManagerCiudad.jsp">   <i class = "fa fa-home fa-2x"><font face = "calibri" size = 4 color = #81202a> </i> Ciudades  </font></a></li>
+		<li class= "boton"> <a href="ManagerVuelo.jsp">   <i class="fa fa-check-square-o fa-2x"><font face = "calibri" size = 4 color = #81202a></i> Vuelos  </font></a></li>
+		<li class ="boton"><a href="ManagerAvion.jsp">   <i class="fa fa-plane fa-2x"><font face = "calibri" size = 4 color = #81202a></i> Aviones  </font></a></li> 
+                <li class ="boton"><a href="ManagerViaje.jsp">   <i class="fa fa-camera-retro fa-2x"><font face = "calibri" size = 4 color = #81202a></i> Viajes  </font></a></li> 
+                <li class ="boton"> <a href="#">   <i class = "fa fa-user"> </i>  <%=( (Cliente) request.getSession().getAttribute("user")).getNombre() %></a></li>
+	</ul>
+		</div>
+		</nav>
+                
+		<!-- FIn Navegacion-->
+                
+                <br/><br/><br/>	 
+<footer>
+    <a onclick="logout();return false;" href="" title="Cerrar Sesión"> <p> <font face = "calibri" size = 5 color = #81202a>  Cerrar Sesión </font> </p> </a>
+</footer>
+                <script>
+    function logout(){
+       
+             Proxy.userLogout(
+                function(){
+                    document.location="/ProyectoAerolinea/PaginaPrincipal.jsp";
+               });
+    
+}
+</script>
