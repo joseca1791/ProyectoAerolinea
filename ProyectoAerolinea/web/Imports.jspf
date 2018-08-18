@@ -1,0 +1,29 @@
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<link href="jquery/jquery-ui.css" rel="stylesheet">
+		<script src="jquery/external/jquery/jquery.js"></script>
+		<script src="jquery/jquery-ui.js"></script>
+
+<!--El mio -->		
+<link rel="stylesheet" title="Estilo" type="text/css" href="css/estilo.css">
+<link rel="stylesheet" title="Estilo" type="text/css" href="css/style.css">
+
+		<script src="js/javascript.js"></script>
+                <script src="js/Ciudad.js"></script>
+                <script src="js/Cliente.js"> </script>
+		<script src="js/Promo.js"></script>
+		<script src="js/Vuelo.js"></script>
+                <script src="js/Proxy.js"></script>
+                <script src="js/Avion.js"></script>
+                <script src="js/Viaje.js"></script>
+                <script src="js/Pasajero.js"></script>
+                <script src="js/Reservacion.js"></script>
+                <script src="js/Tiquete.js"></script>
+                <script src="js/JsonUtils.js"></script>
+
+
+<!-- bxSlider Javascript file -->
+		<script src="bx/jquery.bxslider.min.js"></script>
+		<!-- bxSlider CSS file -->
+		<link href="bx/jquery.bxslider.css" rel="stylesheet" />
