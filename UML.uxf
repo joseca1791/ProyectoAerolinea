@@ -2,14 +2,49 @@
 <diagram program="umlet" version="14.2">
   <zoom_level>10</zoom_level>
   <element>
-    <id>UMLUseCase</id>
+    <id>UMLActor</id>
     <coordinates>
-      <x>200</x>
-      <y>70</y>
-      <w>120</w>
-      <h>40</h>
+      <x>50</x>
+      <y>110</y>
+      <w>60</w>
+      <h>110</h>
     </coordinates>
-    <panel_attributes>Use case 1</panel_attributes>
+    <panel_attributes>Usuario</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>20</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Usuario
+--
+int tipo_usuario;
+string rol_usuario;
+varchar(15) contraseña;
+string primerNombre;
+string segundoNombre;
+string primerApellido;
+string segundoApellido;
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>250</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>
+--
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

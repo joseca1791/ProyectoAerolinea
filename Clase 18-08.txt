@@ -1,0 +1,24 @@
+Estructura Android:
+
+app (apk o aplication).
+manifests (el primer punto de arranque, siempre el manifests hay que decirle que arranque con algo, generalmente un activity de login, actividades que se hayan generado, etc) 
+java (van a estar los fuentes del lenguaje, clases pero mas que nada son el uso de la clase activities (como los servlets)).
+res (para imagenes es drawable, para layouts o representacion xml, es decir la interfaz, se coloca en layout.
+--existen logins defaults y se le da alguna personalizacion.
+--para traer layout uso la variable global R.layout."nombredellayout"
+
+--Yo tengo un xml, el xml es un layout, ese layout es por decirlo asi mi pantalla login, si yo tengo navigationdrawer, no puedo decirle que uno vaya al otro sin pasar primero por el activity, entonces esos layouts se enlazan a traves de los activities.
+Para comunicarme entre layouts necesito pasar por los activities primero, a traves de los Intent, y se le pone el nombre de la clase de la siguiente actividad, en esa clase debe estar el llamado al xml propio de esa actividad.
+
+El activity es el que controla la interfaz (y la manipulo tambien)
+
+Ejemplo: loginActivity --
+	en la linea 40 esta el campo email de tipo <AutoCompleteTextView>
+	en el login activity en la linea 83 va y crea una variable mEmailView y para llenarlo toma un findViewById(R.id.email);
+
+En el modelo de 5 capaz se tiene una 
+ 1. interfaz - fisica, no se incluye en el proyecto  (generalmente en android es xml).
+ 2. control. - fisica, no se incluye en el proyecto  (las actividades de android estan aqui, en el control).
+ 3. logica de negocio. - fisica, no se incluye en el proyecto
+ 4. acceso a datos (listas con objetos, operaciones como agregar, eliminar, consultar (CRUD)). - fisica, no se incluye en el proyecto 
+ 5. datos -normalmente es logica, no se incluye en el proyecto, pueden ser tambien xml..
