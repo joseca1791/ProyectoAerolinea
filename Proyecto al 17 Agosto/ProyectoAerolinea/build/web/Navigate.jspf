@@ -1,0 +1,58 @@
+<%@ page import ="Model.Cliente"%>
+<%@page errorPage="Seguridad.jsp" %>
+
+
+<header class =cabezera>
+<div class= "container">
+
+<div class ="row">
+<div class="col-sm-3 ">
+
+<!--<img src ="imagenes/aerofast.jpg" id= "aero">-->
+
+</div>
+
+
+
+</div>
+</div>
+</header>
+	<!-- FIN Cabezera -->
+
+<!-- Navegacion -->
+
+<nav>
+<div class ="container nav">
+<ul class ="menu">
+    <li class="boton"> <a href= "PaginaPrincipal.jsp">   <i class = "fa fa-home fa-2x"> <font face = "calibri" size = 4 color = #81202a></i> Inicio </font></a></li>
+		<li class= "boton"> <a href="Ofertas.jsp">   <i class="fa fa-check-square-o fa-2x"> <font face = "calibri" size = 4 color = #81202a ></i> Ofertas </font></a></li>
+		<li class ="boton"><a href="Vuelos.jsp">   <i class="fa fa-plane fa-2x"><font face = "calibri" size = 4 color = #81202a ></i>Vuelos  </font></a></li> 
+                <!--Aqui pregunto si alguien está loggeado-->
+                
+               <% Cliente cliente = (Cliente) request.getSession().getAttribute("user");%>
+                <%if (cliente == null){%>
+                <li class ="boton"> <a href="NuevoUsuario.jsp">   <i class = "fa fa-user-plus"> <font face = "calibri" size = 4 color = #81202a ></i> Nuevo Usuario </font></a></li>
+		<li class="boton" id="Iniciar"> <a href="IniciarSesion.jsp">   <i class ="fa fa-user"> <font face = "calibri" size = 4 color = #81202a ></i> Iniciar Sesion </font></a></li>	
+		</ul>
+		</div>
+		</nav>
+		<%}else{%>
+                <li class ="boton"> <a href="#">   <i class = "fa fa-user"> </i> <%=( (Cliente) request.getSession().getAttribute("user")).getNombre() %></a></li>
+                <li class ="boton" onclick="logout();return false;"> <a href="" title="Logout">   <i class = "fa fa-sign-out">  <font face = "calibri" size = 4 color = #81202a ></i> Cerrar Sesión </font></a></li>
+
+		</ul>
+		</div>
+		</nav>
+                <%}%>
+		<!-- FIn Navegacion-->
+                
+                <script>
+    function logout(){
+       
+             Proxy.userLogout(
+                function(){
+                    document.location="/ProyectoAerolinea/PaginaPrincipal.jsp";
+               });
+    
+}
+</script>
