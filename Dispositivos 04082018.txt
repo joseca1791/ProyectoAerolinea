@@ -1,14 +1,13 @@
 Servidor:
 	Backend
-		Capa de datos. -- base de datos/recomendado Oracle/esta capa no se va a ver dentro de 					las carpetas o del proyecto, solo va a estar formalizada como PL-SQL 					(funciones y procedimientos almacenados). Trabajar esto en la capa de 				datos da seguridad al proyecto
-				JDBC: tiene 3 elementos, el statement (select *), el prepair statement 					(insert + ciertos parámetros), el callable statement (llama la función 				o el procedimiento almacenado).
-		Capa de acceso a datos. -- las listas de objetos, y los patrones, como el patrón 				iterador. Aquí va el CRUD.
-		Capa de lógica de negocio. -- NUNCA debería meterse input output en la lógica de 				negocio, operación que se necesite realizar se manda a FE, no 				directamente desde la lógica de negocio.
-		Capa de control. -- hacer match entre el FE y el BE (si es Web, me la juego con JSP o 				cualquier webserver).
+		Capa de datos. -- base de datos/recomendado Oracle/esta capa no se va a ver dentro de las carpetas o del proyecto, solo va a estar formalizada como PL-SQL (funciones y procedimientos almacenados). Trabajar esto en la capa de datos da seguridad al proyecto
+				JDBC: tiene 3 elementos, el statement (select *), el prepair statement (insert + ciertos parámetros), el callable statement (llama la función o el procedimiento almacenado).
+		Capa de acceso a datos. -- las listas de objetos, y los patrones, como el patrón iterador. Aquí va el CRUD.
+		Capa de lógica de negocio. -- NUNCA debería meterse input output en la lógica de negocio, operación que se necesite realizar se manda a FE, no directamente desde la lógica de negocio.
+		Capa de control. -- hacer match entre el FE y el BE (si es Web, me la juego con JSP o cualquier webserver).
 	Frontend
-		Con el backend, puede haber una salida a un webapp, a un desktop, mobile app o 				console app
+		Con el backend, puede haber una salida a un webapp, a un desktop, mobile app o 	console app
 		El patrón observer va aquí,en el frontend.
-
 
 Ejemplo:
 
