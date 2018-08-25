@@ -1,0 +1,11 @@
+Capa de presentacion -> JSP
+Control -> Servlet
+
+Como pasar entre JSP y Servlet
+---------------------------------
+
+Generalmente el website tiene entre sus capas la vista, aqui van las JSP.
+
+Dentro del JSP se va a notar que es una combinación de HTML.
+Generalmente este HTML es estático. Para que sea dinámico se hace programación usando los tags <% %> dentro de esto puedo hacer un for, un if.
+La jsp tiene un action dentro del form (como se llama el recurso, y el parametro que se le va a mandar), en la parte de control en la línea 52 yo hago un request.getParameter("action").
