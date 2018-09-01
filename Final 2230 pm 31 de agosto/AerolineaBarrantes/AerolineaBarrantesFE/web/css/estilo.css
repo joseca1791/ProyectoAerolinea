@@ -1,0 +1,79 @@
+body, html{
+	background-image: url(cielo.jpg) ;
+	 background-size: 100% 100%;
+	 height:100%;
+ margin:0;
+ padding:0;
+}
+
+/*menu principal*/
+
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 16%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 30px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
+
+.active {
+    background-color: #4CAF50; /* Add an active/current color */
+}
+
+
+
+/*boton con imagen*/
+
+
+.btn {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+}
+
+
+/*fondo de titulos*/
+.nav{
+	background-color: rgba(255, 255, 255, 0.5); 
+        width: 50%;
+        text-align: center;
+}
+
+
+/*tablas*/
+#customers tr{
+    background-color:  #ced0f8 
+}
+
+#customers tr:hover{background-color: #e0e0e8 ;} 
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;}
+
+
+
+
