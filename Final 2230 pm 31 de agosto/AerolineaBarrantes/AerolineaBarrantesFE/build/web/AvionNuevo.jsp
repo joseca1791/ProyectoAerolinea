@@ -16,7 +16,8 @@
     </head>
     <body>
         <section>
-              
+                <nav>
+<div class ="container nav">
            <form id="AgregarAvion" action="adminAviones?action=registrarAvionNuevo" method="post">
                <br>
                     <label><font face = "calibri" size = 6 color = #81202a>Código: </font></label>
@@ -37,6 +38,8 @@
                     <input type="number" name="capacidadAvion" id="capacidadAvion" required/>
                     
                     </br>
+                     </div>
+		</nav> 
                        <br>
                      <button class="btn"> <i class="fa fa-check"> </i> Agregar Avion  </button>
                       </br>

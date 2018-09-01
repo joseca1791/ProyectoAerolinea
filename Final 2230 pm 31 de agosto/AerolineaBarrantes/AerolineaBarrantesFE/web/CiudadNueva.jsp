@@ -16,7 +16,8 @@
     </head>
     <body>
         <section>
-          
+              <nav>
+<div class ="container nav">
            <form id="AgregarCiudad" action="adminCiudades?action=registrarCiudadNueva" method="post">
                
                <br>
@@ -29,6 +30,8 @@
                     <input type="text" name="nombreCiudad" id="nombreCiudad" required/>
                     
                      </br>
+                       </div>
+		</nav> 
                        <br>
                     <button class="btn"> <i class="fa fa-check"> </i> Agregar Ciudad  </button>
                       </br>
