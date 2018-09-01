@@ -8,8 +8,6 @@ create table aviones(
     capacidad int
 );
 
-alter table aviones add constraint pkAviones primary key (codigo_Avion);
-
 create or replace procedure agregarAvion(codigo_Avion varchar2,modelo varchar2,capacidad int)
 as
 begin
@@ -144,8 +142,6 @@ begin
     return c1;
 end;
 /
-
-
 ----------------------------------------------------------------------------------------------------------------
                                 /*Pasajeros*/
 ----------------------------------------------------------------------------------------------------------------
@@ -163,9 +159,6 @@ CREATE TABLE reservaciones(
 numero_reservacion int not null primary key,
 viaje varchar(10) not null,
 usuario varchar(15) not null);
-
-alter table reservaciones add constraint fk_viaje foreign key (viaje) references viajes(codigo_viaje);
-alter table reservaciones add constraint fk_usuario foreign key (usuario) references clientes(nombre_usuario);
 ----------------------------------------------------------------------------------------------------------------
                                 /*Tiquetes*/
 ----------------------------------------------------------------------------------------------------------------
@@ -176,8 +169,6 @@ apellido_dueno varchar(70) not null,
 pasaporte varchar(15) not null,
 asiento int  not null,
 reservacion int not null);
-
-alter table tiquetes add constraint fk_reservacion foreign key(reservacion) references reservaciones(numero_reservacion);
 ----------------------------------------------------------------------------------------------------------------
                                 /*Viajes*/
 ----------------------------------------------------------------------------------------------------------------
@@ -187,9 +178,6 @@ vuelo varchar(10) not null,
 avion varchar(10) not null,
 fecha varchar(11) not null,
 vendidos int);
-
-alter table viajes add constraint fk_vuelo foreign key (vuelo) references vuelos(numero_vuelo);
-alter table viajes add constraint fk_avion foreign key (avion) references aviones(codigo_Avion);
 ----------------------------------------------------------------------------------------------------------------
                                 /*Vuelos*/
 ----------------------------------------------------------------------------------------------------------------
@@ -207,9 +195,24 @@ begin
 insert into vuelos values(codigo,origen,destino,precio,tiempo,promo);
 end;
 /
-
-alter table vuelos add constraint fk_origen foreign key (origen) references  ciudades(codigo_ciudad);
-alter table vuelos add constraint fk_destino foreign key (destino) references  ciudades(codigo_ciudad);
+create or replace function buscarVueloPorNumeroVuelo (n varchar2)
+return sys_refcursor
+is
+    c1 sys_refcursor;
+begin
+    open c1 for select * from vuelos where numero_vuelo =n;
+    return c1;
+end;
+/
+create or replace function listarVuelos (n varchar2)
+return sys_refcursor
+is
+    c1 sys_refcursor;
+begin
+    open c1 for select * from Vuelos;
+    return c1;
+end;
+/
 
 ----------------------------------------------------------------------------------------------------------------
                                 /*Informacion adicional*/
@@ -229,23 +232,11 @@ select * from clientes
 select * from vuelos
 */
 
-
-create or replace function buscarVueloPorNumeroVuelo (n varchar2)
-return sys_refcursor
-is
-    c1 sys_refcursor;
-begin
-    open c1 for select * from vuelos where numero_vuelo =n;
-    return c1;
-end;
-/
-
-create or replace function listarVuelos (n varchar2)
-return sys_refcursor
-is
-    c1 sys_refcursor;
-begin
-    open c1 for select * from Vuelos;
-    return c1;
-end;
-/
+alter table aviones add constraint pkAviones primary key (codigo_Avion);
+alter table vuelos add constraint fk_origen foreign key (origen) references  ciudades(codigo_ciudad);
+alter table vuelos add constraint fk_destino foreign key (destino) references  ciudades(codigo_ciudad);
+alter table viajes add constraint fk_vuelo foreign key (vuelo) references vuelos(numero_vuelo);
+alter table viajes add constraint fk_avion foreign key (avion) references aviones(codigo_Avion);
+alter table tiquetes add constraint fk_reservacion foreign key(reservacion) references reservaciones(numero_reservacion);
+alter table reservaciones add constraint fk_viaje foreign key (viaje) references viajes(codigo_viaje);
+alter table reservaciones add constraint fk_usuario foreign key (usuario) references clientes(nombre_usuario);
