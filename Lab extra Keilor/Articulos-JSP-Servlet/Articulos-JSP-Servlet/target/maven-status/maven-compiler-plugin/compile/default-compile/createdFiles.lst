@@ -1,0 +1,4 @@
+com\ecodeup\articulo\controller\AdminArticulo.class
+com\ecodeup\articulos\model\Conexion.class
+com\ecodeup\articulos\dao\ArticuloDAO.class
+com\ecodeup\articulos\model\Articulo.class
