@@ -1,0 +1,137 @@
+body, html{
+	 background-image: url(cielo.jpg) ;
+	 background-size: 100% 100%;
+	 height:100%;
+        
+ margin:0;
+ padding:0;
+}
+
+.activeBar {
+    background-color: #4CAF50; 
+}
+
+.active {
+    border-top: 1px solid black;
+    background-color: rgba(66,127,174,0.5); 
+}
+
+.btn {
+    background-color: DodgerBlue; 
+    border: none; 
+    color: white; 
+    padding: 12px 16px;
+    font-size: 16px; 
+    cursor: pointer; 
+}
+
+.btnLogin {
+    background-color: DodgerBlue; 
+    border: none; 
+    color: white; 
+    padding: 12px 16px;
+    font-size: 16px; 
+    cursor: pointer; 
+}
+
+.btn:hover {
+    background-color: RoyalBlue;
+}
+
+.btnSearch{
+    padding:10px;
+    margin-bottom: 10px;
+}
+
+#calendario,#agregarViaje{
+    visibility:hidden;
+}
+
+.container1{
+    color:blue;
+    height:10%;
+    width:100%;
+}
+
+#customers tr:hover{
+    background-color: #e0e0e8 ;
+} 
+
+/*#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}*/
+
+#customers tr{
+    background-color:  #ced0f8 
+}
+
+.h1-VuelosDisponibles{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size:60px;
+    height:50px;
+}
+
+.image-carousel{
+    width: 700px;
+    height:400px;
+}
+
+.nav{
+      
+       
+	background-color: rgba(255, 255, 255, 0.5); 
+        width: 100%;
+      
+        
+}
+    
+.navIcons{
+    font-size: 30px;
+    transition: all 0.3s ease;
+    margin-right:65px;
+}
+
+.navIcons a:hover{
+    color:white;
+    background-color: rgba(93,213,233,1);
+}
+
+.section{
+    text-align: center;
+    width: 100%;
+}
+
+.text{
+    color:#81202a;
+    font-family: calibri;
+    font-size: 16px;
+    text-align: center;
+}
+
+.tableVuelos,td{
+/*    border: 2px solid green;*/
+    border-radius: 8px;
+    margin-bottom: 50px;
+
+}
+
+.tableVuelos th{
+    text-align:left;
+}
+/*
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+*/
+
+
+
+
