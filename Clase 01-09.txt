@@ -1,0 +1,28 @@
+-------------------------------------------------------------------
+-------------------------------MANIFEST----------------------------
+-------------------------------------------------------------------
+Manifest: aqui esta la configuracion, el activity con el cual inicia la aplicacion, permisos, de conexion, de storage,
+
+-------------------------------------------------------------------
+-------------------------------JAVA--------------------------------
+-------------------------------------------------------------------
+En la carpeta Java esta toda la programacion de Java (todos los activities), ahi esta el loginActivity, el NavDrawer
+NOTA: cuando yo genero el activity el me crea la interfaz grafica (el xml) de manera automatica.
+
+onCreate (es como el main).
+
+Para llamar otro layout es con setContentView(R.layout.activity_elqueyoquiera);
+
+NOTA: por cada layout deberia tener un activity que lo administre, y dentro del onCreate poner hacia donde va.
+
+-------------------------------------------------------------------
+-------------------------------RES---------------------------------
+-------------------------------------------------------------------
+Guardar los iconos, botones, imagenes, aquí en res
+
+-------------------------------------------------------------------
+Para poder accesar un id necesito hacerlo a través del R.id.XXX (es para referirme a una variable del XML), puedo referirme tanto a variables como a layouts completos.
+
+
+TAREA (androidstudiofaqs.com): BUSCAR EL CARTADAPTER.
+BUSCAR el putExtra desde el intent (le puedo pasar parametros al controlador como un set.attribute).
