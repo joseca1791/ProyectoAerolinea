@@ -41,3 +41,40 @@ class App extends React.Component{
 }
 
 ReactDOM.render(<App />,mountNode);
+
+
+
+
+-----------------------------------------------------------------------
+JQUERY
+
+<script type="text/javascript" src="jquery.js"></script>
+
+
+example code:
+<html>
+	<head>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(fucntion(){
+				$('#myContent').html("changed");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="myContent">
+		My jQuery enabled page!
+		</div>
+	</body>
+</html>
+
+
+
+example code 2:
+$.ajax({
+	url: 'ajax/test.html',
+	success: function(data){
+		$('.result').html(data);
+		alert('Load was performed.');
+	}
+});
