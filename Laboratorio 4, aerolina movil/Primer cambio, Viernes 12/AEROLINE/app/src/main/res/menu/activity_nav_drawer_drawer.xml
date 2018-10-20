@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Vuelos"
+            android:enabled="false"
+            android:icon="@drawable/ic_menu_historial"
+            android:title="Vuelos" />
+        <item
+            android:id="@+id/Info"
+            android:enabled="false"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Acerca de" />
+    </group>
+
+    <item android:title="Mantenimientos">
+        <menu>
+            <item
+                android:id="@+id/nav_avion"
+                android:enabled="false"
+                android:icon="@drawable/ic_menu_listas"
+                android:title="Aviones" />
+            <item
+                android:id="@+id/Rutas"
+                android:enabled="false"
+                android:icon="@drawable/ic_menu_listas"
+                android:title="Mant.Rutas" />
+            <item
+                android:id="@+id/nav_vuelo"
+                android:enabled="false"
+                android:icon="@drawable/ic_menu_listas"
+                android:title="Mant.Vuelos" />
+            <item
+                android:id="@+id/Reservaciones"
+                android:enabled="false"
+                android:icon="@drawable/ic_menu_listas"
+                android:title="Reservaciones" />
+            <item
+                android:id="@+id/nav_seguridad"
+                android:enabled="false"
+                android:icon="@drawable/ic_menu_seguridad"
+                android:title="Seguridad" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_salir"
+                android:title="Log Out" />
+        </menu>
+    </item>
+
+</menu>
