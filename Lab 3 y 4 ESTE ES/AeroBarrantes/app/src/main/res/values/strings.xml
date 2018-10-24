@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">AeroBarrantes</string>
+
+    <!-- Preferences-->
+    <string name="preference_key_foruser">com.example.pc.aerobarrantes.USER</string>
+    <string name="preference_key_foruser_default">none</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Loguearse</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">Email inválido</string>
+    <string name="error_invalid_password">La contraseña es muy corta</string>
+    <string name="error_incorrect_password">La contraseña es incorrecta</string>
+    <string name="error_field_required">Ingrese un correo</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_nav_drawer">Promociones</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Andres y Jose Barrantes</string>
+    <string name="nav_header_subtitle">Menú</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_aviones">Aviones</string>
+    <string name="title_activity_clientes">Clientes</string>
+    <string name="title_activity_ciudades">Ciudades</string>
+    <string name="title_activity_viajes">Viajes</string>
+    <string name="title_activity_vuelos">Vuelos</string>
+
+</resources>

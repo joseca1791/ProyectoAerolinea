@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Menú">
+        <item
+            android:id="@+id/nav_aviones"
+            android:icon="@drawable/ic_aviones"
+            android:title="Aviones" />
+        <item
+            android:id="@+id/nav_ciudades"
+            android:icon="@drawable/ic_ciudades"
+            android:title="Ciudades" />
+        <item
+            android:id="@+id/nav_clientes"
+            android:icon="@drawable/ic_clientes"
+            android:title="Clientes" />
+        <item
+            android:id="@+id/nav_viajes"
+            android:icon="@drawable/ic_viajes"
+            android:title="Viajes" />
+        <item
+            android:id="@+id/nav_vuelos"
+            android:icon="@drawable/ic_vuelos"
+            android:title="Vuelos" />
+        </item>
+    </group>
+
+    <item android:title="Sesión">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_salir"
+                android:title="Cerrar Sesión" />
+        </menu>
+    </item>
+
+</menu>
